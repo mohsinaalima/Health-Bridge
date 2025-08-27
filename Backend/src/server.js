@@ -1,5 +1,6 @@
 //server
 import express from "express";
+import connectDB from "./config/db";
 const app = express();
 const PORT = 3000;
 
@@ -12,4 +13,5 @@ app.get("/", (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
+  connectDB();
 });
